@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --clr-main-color:rgb(30, 30, 30);
+            --clr-white-main:#fff;
+            --clr-background:black;
+        }
+        .parent{
+            display: grid;
+            place-content: center;
+            min-height: 100vh;
+        }
+        .calculatorcontainer{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 3px;
+            padding: 10px;
+            background: blue;
+        }
+        .input input{
+            width: 99%;
+            padding: 50px;
+            border: none;
+             box-shadow: 1px 1px 2px var(--clr-white-main);
+             background: #f4f4f4;
+        }
+        #ebube{
+            font-size: 1rem;
+        }
+        .calculator-body{
+            background: #000000;
+        }
+        .rotate{
+            grid-row-start: 6;
+            grid-row-end: 5;
+            grid-column-start: 5;
+             background:black;
+            padding: 11px;
+            border-radius: 15px;
+        }
+        input{
+            text-align: right;
+        }
+        /* #red{
+            color: red;
+        } */
+    </style>
+</head>
+<body>
+    <!--parent  -->
+    <div class="parent">
+        <h2>casio calculator</h2>
+        <div class="calculator-body">
+            <div class="input">
+                <input type="text" id="input" readonly>
+                <p id="ebube" style="text-align: right font-size;"></p>
+                <!-- <h6 id="red">invalid Expression</h6> -->
+            </div>
+            <div class="calculatorcontainer">
+                <button class="operator" style="color: green;">AC</button>
+                <button class="operator" style="color: #000000;">rate</button>
+                <button class="operator" style="color: #000000;">autoreview</button>
+                <button class="operator" style="color: #000000;">CORRECT</button>
+                <button class="operator" style="color: #000000;">&UpArrow;</button>
+                <button class="operator" style="color: #000000;">&DownArrow;</button>
+                <button class="operator" style="color: green;">TAX-</button>
+                <button class="operator" style="color: #000000;">%</button>
+                <button class="operator" style="color: #000000;">&ROOT</button>
+                <button class="operator" style="color: #000000;">&GreaterEqual;</button>
+                <button class="operator" style="color: #000000;">MU</button>
+                <button class="operator" style="color: #000000;">GT</button>
+                <button class="operator" style="color: #000000;">+/-</button>
+                <button class="number" style="color: #000000;">7</button>
+                <button class="number" style="color: #000000;">8</button>
+                <button class="number" style="color: #000000;">9</button>
+                <button class="operator" style="color: #000000;">&times;</button>
+                <button class="operator" style="color: #000000;">&divide;</button>
+                <button class="operator" style="color: red;">C</button>
+                <button class="number" style="color: #000000;">4</button>
+                <button class="number" style="color: #000000;">5</button>
+                <button class="number" style="color: #000000;">6</button>
+                <button class="operator" style="color: #000000;">-</button>
+                <button class="operator" style="color: #000000;">MRC</button>
+                <button class="operator"  style="color:red;">AC</button>
+                <button class="number" style="color: #000000;">1</button>
+                <button class="number" style="color: #000000;">2</button>
+                <button class="number" style="color: #000000;">3</button>
+                <button class="rotate" style="color: #000000;"></button>
+                <button class="operator" style="color: #000000;">M-</button>
+                <button class="number" style="color: #000000;">0</button>
+                <button class="number" style="color: #000000;">00</button>
+                <button class="operator" style="color: #000000;">.</button>
+                <button class="operator" style="color: #000000;">=</button>
+                <button class="rotate" style="color: #000; background: #fff; border: none;">+</button>
+                <button class="operator" style="color: #000000;">M+</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="/calculator.js"></script>
+</html>
